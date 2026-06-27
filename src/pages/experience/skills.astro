@@ -1,18 +1,16 @@
 ---
 import AboutHeroImage from '../../assets/skill-tree.png';
-import Layout from '../../layouts/BlogPost.astro';
+import Layout from '../../layouts/Page.astro';
 // Define your data directly in the frontmatter
 import CVTable from '../../components/CVTable.astro';
 const programmingSkills = [
 	{
 		type: 'Programming',
 		name: 'C',
-		subtext: 'Low Level Understanding, Security, Performance, Embedded Systems',
+		subtext: 'Low Level, Security, Performance, Embedded Systems',
 		levelText: 'Expert',
 		levelPercentage: 95,
 		projects: [
-			{ name: 'E-Commerce App', url: 'https://github.com/yourusername/shop' },
-			{ name: 'Portfolio', url: '#' }
 		]
 	},
 	{
@@ -110,7 +108,6 @@ const ITSkills = [
 	title="My Skills"
 	description="Lorem ipsum dolor sit amet"
 	pubDate={new Date('2026-06-23')}
-	heroImage={AboutHeroImage}
 >
 	<p>I figured I'd keep here a regularly updated list of my skills and experience over the years
 	as well as the most important projects I've worked on these last few years. If you are considering me for a

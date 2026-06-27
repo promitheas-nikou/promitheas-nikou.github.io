@@ -1,15 +1,51 @@
 ---
 import AboutHeroImage from '../../assets/skill-tree.png';
-import Layout from '../../layouts/BlogPost.astro';
+import Layout from '../../layouts/Page.astro';
 // Define your data directly in the frontmatter
 import CVTable from '../../components/CVTable.astro';
+import TimelineComponent from '../../components/Timeline.astro';
+const timeline = [
+    {
+        date: "Sep 2026 - Present",
+        title: "Teaching Assistant NuS I",
+        organization: "D-ITET, ETH",
+        location: "Zurich",
+        description: "Teaching assistant for Netzwerk und Schaltungen I (Prof. Christian Franck)",
+        tags: ['Teaching', 'Physics', 'Electromagnetism', 'Circuit Design'],
+    },
+    {
+        date: "Dec 2025 - Jun 2026",
+        title: "Mobile App and Firmware Developer",
+        organization: "Sensory-Motor Systems Lab, ETH",
+        location: "Zurich",
+        description: "Improved Bluetooth (BLE) protocol and firmware for StepSmart project, and implemented full integration with android app.",
+        tags: ['Android', 'Bluetooth', 'Firmware', 'C', 'Java', 'Kotlin'],
+        link: { label: "Link", url: "https://example.com" }
+    },
+    {
+        date: "Sep 2023 - Jul 2024",
+        title: "Fullstack Developer",
+        organization: "JA Greece Student Virtual Business",
+        location: "Thessaloniki",
+        description: "Developed website, android app, and backend infrastructure for the virtual business '@Home', matching clients to professionals such as hairdressers, chiropractors etc for 'at home' services.",   // short blurb of what you did
+        tags: ['Web', 'PostgreSQL', 'Android', 'Java', 'NodeJS'],
+        link: { label: "Link", url: "https://example.com" }
+    }
+];
 ---
 
 <Layout
-        title="Experience"
+        title="Timeline"
         description="My previous Experience"
         pubDate={new Date('2026-06-23')}
         heroImage={AboutHeroImage}
 >
-    <p></p>
+    <p>Here you can find more information about projects I've contributed to and my previous work experience.</p>
+
+    <!--<p>Check out the <a href="/experience/timeline">timeline</a> for a chronological view of my past positions.</p>-->
+    <p>You can also check out the <a style="font-weight: bold" href="/experience/skills">skills page</a> for a compiled list of important skills I have picked up or tools I am familiar with.</p>
+
+    <TimelineComponent items={timeline}>
+
+    </TimelineComponent>
 </Layout>
