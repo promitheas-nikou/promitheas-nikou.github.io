@@ -62,6 +62,15 @@ const programmingSkills = [
 	},
 	{
 		type: 'Programming',
+		name: 'Kotlin',
+		subtext: 'AndroidX Development',
+		levelText: 'Intermediate',
+		levelPercentage: 60,
+		projects: [
+		]
+	},
+	{
+		type: 'Programming',
 		name: 'Assembly (x86/amd64)',
 		subtext: 'Hardware-specific performance optimizations, Advanced Algorithm Implementation, Programming Embedded Systems',
 		levelText: 'Competent',
@@ -89,7 +98,7 @@ const programmingSkills = [
 	},
 ];
 
-const ITSkills = [
+const ToolsSkills = [
 
 	{
 		type: 'IT',
@@ -99,6 +108,15 @@ const ITSkills = [
 		levelPercentage: 80,
 		projects: [
 			{name: 'My GitHub', url: 'https://github.com/promitheas-nikou/' },
+		]
+	},
+	{
+		type: 'IT',
+		name: 'Android Development',
+		subtext: 'Legacy Applications, Modern AndroidX/Jetpack, both Java and Kotlin',
+		levelText: 'Advanced',
+		levelPercentage: 70,
+		projects: [
 		]
 	},
 ]
@@ -116,6 +134,6 @@ const ITSkills = [
 	it further! I'm very open to work or other opportunities</p>
 	<h1>Programming</h1>
 	<CVTable skills={programmingSkills} />
-	<h1>IT/Other Skills</h1>
-	<CVTable skills={ITSkills} />
+	<h1>Tools/Frameworks</h1>
+	<CVTable skills={ToolsSkills} />
 </Layout>
